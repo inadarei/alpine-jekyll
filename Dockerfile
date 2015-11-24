@@ -16,5 +16,7 @@ RUN apk upgrade --update \
  && gem install jekyll-paginate \
  && rm -rf /root/src /tmp/* /usr/share/man /var/cache/apk/* \
  && apk search --update
+
+EXPOSE 4000
  
- ENTRYPOINT ["jekyll"]
+ENTRYPOINT ["jekyll"]
