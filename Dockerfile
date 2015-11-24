@@ -1,7 +1,7 @@
 FROM alpine:3.2
 MAINTAINER Irakli Nadareishvili @inadarei
 
-ENV REFRESHED_AT 2015-11-24
+ENV REFRESHED_AT 2015-11-25
 
 RUN apk upgrade --update \
  && apk add libatomic readline readline-dev libxml2 libxml2-dev \
