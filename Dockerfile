@@ -10,11 +10,12 @@ RUN apk upgrade --update \
         ruby ruby-dev yaml yaml-dev \
         libffi-dev build-base git nodejs \
         ruby-io-console ruby-irb ruby-json ruby-rake \
- && gem install redcarpet kramdown maruku rdiscount RedCloth liquid pygments.rb \
- && gem install sass safe_yaml \        
- && gem install jekyll -v 2.5 \
- && gem install jekyll-paginate \
+ && gem install --no-document redcarpet kramdown maruku rdiscount RedCloth liquid pygments.rb \
+ && gem install --no-document sass safe_yaml \        
+ && gem install --no-document jekyll -v 2.5 \
+ && gem install --no-document jekyll-paginate \
  && rm -rf /root/src /tmp/* /usr/share/man /var/cache/apk/* \
+ && apk del build-base \
  && apk search --update
 
 EXPOSE 4000
